@@ -1,0 +1,34 @@
+<div class="container">
+    <div>
+        <h1> Upload form</h1>
+        <form name="upload_form">
+            <input type="number" min="2" max ='3' ng-model="type" value="2" required>
+
+            <input
+                    type="file"
+                    ngf-select
+                    ng-model="file"
+                    name="file"
+                    ngf-pattern="'image/*'"
+                    accept="image/*"
+                    ngf-max-size="20MB"
+            />
+            <img id="uploadImg" ng-show="!!file" ngf-thumbnail="file"/>
+            <i ng-show="upload_form.file.$error.required">*required</i><br>
+            <i ng-show="upload_form.file.$error.maxSize">File too large
+                {{file.size / 1000000|number:1}}MB: max 20M</i>
+
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="submit()" > Upload image </button>
+                <button class="btn btn-warning" type="button" ng-click="cancel()"> no</button>
+            </div>
+        </form>
+
+    </div>
+    <h2>{{data}}</h2>
+    <h2>Here will be image after crop</h2>
+    <img ng-src="data:image/JPEG;base64,{{image1}}" >
+    <img ng-src="data:image/JPEG;base64,{{image2}}" >
+    <img ng-src="data:image/JPEG;base64,{{montage()}}" >
+</div>

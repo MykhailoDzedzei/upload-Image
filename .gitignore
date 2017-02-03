@@ -1,0 +1,13 @@
+node_modules
+dist
+jspm_packages
+src/server/upload
+
+# Optional npm cache directory
+.npm
+
+# JetBrains WebStorm IDE files
+.idea
+
+
+
