@@ -1,7 +1,7 @@
 # AngularJS-Todos
 To start project you need to have already running MongoDB and then do those steps:
 - npm install
-- gulp-client
+- gulp
 - node app.js(inside src/server folder)
 
 ###Technologies:
