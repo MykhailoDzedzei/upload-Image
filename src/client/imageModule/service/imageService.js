@@ -20,7 +20,6 @@ export default function ($http) {
     };
     this.getMontageImage = () => {
         return $http.get(socket + 'getMontage').then((res) => {
-            console.log(res);
             montage = res.data;
             
         });
